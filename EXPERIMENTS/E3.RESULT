@@ -1,9 +1,0 @@
-PS C:\clg\22 AI\EXPERIMENTS\CSA1725_AI\experiments> python E3.py  
-Solving Water Jug Problem for Jug 1: 4L, Jug 2: 3L, Target: 2L
-
-Solution found! Step-by-step states (Jug1, Jug2):
-Step 0: (0, 0)
-Step 1: (0, 3)
-Step 2: (3, 0)
-Step 3: (3, 3)
-Step 4: (4, 2)
