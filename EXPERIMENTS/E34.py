@@ -3,21 +3,15 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Hides unnecessary TensorFlow startup
 
 import tensorflow as tf
 from tensorflow.keras import layers, models
-
-# 1. Load and preprocess the MNIST dataset (handwritten digits 0-9)
 mnist = tf.keras.datasets.mnist
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
-
-# Normalize pixel values to be between 0 and 1
 X_train, X_test = X_train / 255.0, X_test / 255.0
-
-# 2. Build the Neural Network Model
 model = models.Sequential([
-    layers.Input(shape=(28, 28)),          # Modern input layer shape definition
-    layers.Flatten(),                      # Flatten 28x28 images into a 784-element vector
-    layers.Dense(128, activation='relu'),  # Hidden layer with ReLU activation
-    layers.Dropout(0.2),                   # Dropout layer for regularization to prevent overfitting
-    layers.Dense(10, activation='softmax') # Output layer with 10 classes (digits 0-9)
+    layers.Input(shape=(28, 28)),          
+    layers.Flatten(),                      
+    layers.Dense(128, activation='relu'),  
+    layers.Dropout(0.2),                   
+    layers.Dense(10, activation='softmax') 
 ])
 
 # 3. Compile the Model
